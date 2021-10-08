@@ -1,4 +1,4 @@
-#Scraping Air Quality data using Beautiful Soup and Django
+# Scraping Air Quality data using Beautiful Soup and Django
 
 Deployed live at https://air-scraper.herokuapp.com/gurugram
 
