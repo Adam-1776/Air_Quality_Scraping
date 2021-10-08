@@ -18,7 +18,7 @@ from django.urls import path
 from scraper_api.views import getAir, getDefault
 
 urlpatterns = [
-    path('/', getDefault),
+    path('', getDefault),
     path('admin/', admin.site.urls),
     path('gurugram/', getAir),
 ]

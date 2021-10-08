@@ -48,4 +48,6 @@ def getAir(request):
     return JsonResponse(scrapeWeather(url),safe=False)
 
 def getDefault(request):
-    return 'Visit https://air-scraper.herokuapp.com/gurugram/ to test API'
+    url = 'https://air-quality.com/place/india/gurugram/d2853e61?lang=en&standard=aqi_us'
+    #return scrapeWeather(url)
+    return JsonResponse(scrapeWeather(url),safe=False)
