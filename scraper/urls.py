@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from scraper_api.views import getAir
+from scraper_api.views import getAir, getDefault
 
 urlpatterns = [
+    path('/', getDefault),
     path('admin/', admin.site.urls),
     path('gurugram/', getAir),
 ]
