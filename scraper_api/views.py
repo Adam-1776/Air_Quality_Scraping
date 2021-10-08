@@ -48,4 +48,5 @@ def getAir(request):
     return JsonResponse(scrapeWeather(url),safe=False)
 
 def getDefault(request):
+    print('Inside getDefault')
     return render(request,'default.html')
