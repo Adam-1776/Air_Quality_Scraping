@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 import json
 from bs4 import BeautifulSoup
 import requests
@@ -48,4 +48,4 @@ def getAir(request):
     return JsonResponse(scrapeWeather(url),safe=False)
 
 def getDefault(request):
-    return render_to_response('default.html')
+    return render('default.html')
