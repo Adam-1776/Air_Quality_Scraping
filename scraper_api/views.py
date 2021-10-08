@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 import json
 from bs4 import BeautifulSoup
 import requests
@@ -48,6 +48,4 @@ def getAir(request):
     return JsonResponse(scrapeWeather(url),safe=False)
 
 def getDefault(request):
-    url = 'https://air-quality.com/place/india/gurugram/d2853e61?lang=en&standard=aqi_us'
-    #return scrapeWeather(url)
-    return JsonResponse(scrapeWeather(url),safe=False)
+    return render_to_response('default.html')
