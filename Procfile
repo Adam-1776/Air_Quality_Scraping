@@ -1,1 +1,1 @@
-web: gunicorn scraper.wsgi
+web: gunicorn --chdir /scraper scraper.wsgi
