@@ -31,6 +31,13 @@ def scrapeWeather(url):
         pollutantName=(preprocess(children[0].contents[0]))
         pollutantValue=(preprocess(children[2].contents[0]))
         dict[pollutantName] = pollutantValue
+
+    info = soup.find_all(class_='pollutant-item even') #Looping over listed pollutants and recording them
+    for block in info:
+        children = block.findChildren('div' , recursive=True)
+        pollutantName=(preprocess(children[0].contents[0]))
+        pollutantValue=(preprocess(children[2].contents[0]))
+        dict[pollutantName] = pollutantValue
             
     info = soup.find_all(class_='weather-item') #Looping for listed weather data and recording them
     for block in info:
